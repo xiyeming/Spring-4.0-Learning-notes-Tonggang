@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 使用 bean 的 scope 属性配置 bean 的作用域
+		 singleton: 默认值， 容器初始创建 bean 实力，在整个容器的生命周期内只床架这一个bean。单列的  -->
+	<bean id="car" class="com.sendiyang.beans.autowire.Car"
+		scope="prototype">
+		<property name="brand" value="Audi"></property>
+		<property name="price" value="300000"></property>
+	</bean>
+</beans>

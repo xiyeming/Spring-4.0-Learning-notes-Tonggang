@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="car" class="com.sendiyang.beans.cycle.Car"
+		init-method="init" 
+		destroy-method="destroy">
+		<property name="brand" value="Audi"></property>
+	</bean>
+	
+	<!-- 实现 BeanPostProcessor 接口，并具体提供两个方法的实现 -->
+	<!-- 配置bean 的后置处理器 -->
+	 <bean class="com.sendiyang.beans.cycle.MyBeanPostProcessor">
+	</bean>
+</beans>
